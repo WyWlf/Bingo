@@ -1,0 +1,255 @@
+
+html{
+    background-color:rgb(248, 222, 74);
+}
+.title {
+    font-size: 15vh;
+    margin: auto;
+    padding: 0px;
+    display: inline;
+    font-family: 'Sigmar One', cursive;
+}
+#second-title{
+    color: rgb(0, 183, 255);
+    font-size: 8vh;
+    margin: 0px;
+    font-family: 'Sigmar One', cursive;
+}
+.title-header{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px;
+}
+.login-title-header{
+    text-align: center;
+    align-items: center;
+    padding: 3vh;
+    background-color: rgb(59, 59, 59);
+    width: 95%;
+    margin: auto;
+}
+#homepage-body{
+    text-align: center;
+    padding-top: 10vh;
+}
+#log-in-form{
+    text-align: center;
+}
+
+#log-in-form p {
+    font-size: 3vh;
+
+}
+#homepage-body p {
+    font-size: 3vh;
+}
+
+.homepage-btn{
+    border-radius: 10px;
+    background-color: gray;
+    text-align: center;
+    height: 10vh;
+    width: 40vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    font-weight: bolder;
+    color: white;
+    margin: 2vw;
+}
+
+.homepage-btn:hover{
+    background-color: rgb(176, 228, 228);
+    color: black;
+    box-shadow: 10px 10px;
+    border: 1px solid;
+    transition-duration: 0.5s;
+}
+
+.login-title{
+    display: inline;
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: 'Sigmar One', cursive;
+}
+
+#log-in-form .form-input{
+    height: 5vh;
+    width: 25vw;
+    border-radius: 10px;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    font-size: 3vh;
+}
+
+#log-in-btn {
+    height: 5vh;
+    width: 20vw;
+    border: 0px;
+    margin: 5vh;
+    background-color: gray;
+    color: white;
+    border-radius: 13px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#main-menu-btn {
+    height: 5vh;
+    width: 20vw;
+    border: 0px;
+    margin: 5vh;
+    background-color: gray;
+    color: white;
+    border-radius: 13px;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-bottom: 3vh;
+}
+
+#teach-menu-btn {
+    height: 5vh;
+    width: 20vw;
+    border: 0px;
+    margin: 5vh;
+    background-color: gray;
+    color: white;
+    border-radius: 13px;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-bottom: 3vh;
+}
+
+#right-teach-menu {
+    float: right;
+    margin: auto;
+    min-width: 50%;
+}
+#question-board {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+}
+
+#question-board p{
+    color: black;
+    font-size: 1.5em;
+}
+
+#top-div {
+    height: 60%;
+}
+#bot-div {
+    height: 40%;
+}
+#question-board input{
+    display: block;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+#submt_answ {
+    float: right; 
+    border-radius: 10px; 
+    font-size: 1em; 
+    height: 5vh ;
+    width: 10vw; border: 1px solid black; 
+    background-color: rgb(227, 233, 202);
+}
+#submt_answ:hover {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    transition-duration: 0.5s;
+    box-shadow: 5px 5px 10px rgb(0, 16, 238);
+}
+
+#question-table {
+    display: inline;
+    float: left;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    margin: 25px;
+    margin-top: 0;
+}
+
+#border-card th {
+    border: 1px solid white;
+    height: 10vh;
+    width: 8vw;
+    font-size: 5em;
+    color: white;
+    background-color: rgb(114, 185, 8);
+}
+#border-card tr {
+    border: 1px solid white;
+    height: 10vh;
+    width: 8vw;
+}
+#border-card tr td {
+    border: 1px solid white;
+    height: 10vh;
+    width: 8vw;
+    font-size: 3em;
+    text-align: center;
+    background-color: rgb(241, 189, 91);
+}
+#border-card {
+    float: right;
+    border: 1px solid white;
+    background-color: white;
+    display: inline;
+    margin: 25px;
+}
+
+#left-teach-menu {
+    float: left;
+    min-width: 50%;
+}
+
+
+#type_bar {
+    width: 20vw;
+    height: 5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    border-radius: 10px;
+}
+
+#log-in-btn:hover{
+    background-color: rgb(176, 228, 228);
+    box-shadow: 5px 10px 10px;
+    color: black;
+    font-size: 2.5vh;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+}
+
+#main-menu-btn:hover{
+    background-color: rgb(176, 228, 228);
+    box-shadow: 5px 10px 10px;
+    color: black;
+    font-size: 2.5vh;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+}
+#teach-menu-btn:hover{
+    background-color: rgb(176, 228, 228);
+    box-shadow: 5px 10px 10px;
+    color: black;
+    font-size: 2.5vh;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+}
