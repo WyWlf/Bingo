@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/76d63a97f4.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    <title>Bingo!</title>
+</head>
+<body>
+    <div class="login-title-header">
+        <h1 class="login-title" style="color: rgb(60, 60, 230)">M</h1>
+        <h1 class="login-title" style="color: rgb(228, 20, 20)">A</h1>
+        <h1 class="login-title" style="color: rgb(62, 218, 31)">T</h1>
+        <h1 class="login-title" style="color: rgb(23, 23, 167)">H</h1>
+        <h2 id="second-title" style="display: inline; padding-left: 2vw;">BINGO</h2>
+    </div>
+    <div class="main-container">
+        <div id="add-question-div">
+            <div id="form-container" style="height: 35vh; padding: 2em, 3em;">
+                <form action="" class="form" id="question-form">
+                    <input type="text" id="question" placeholder="Untitled Question">
+                    <span><span class="material-icons-outlined" id="delete-question-btn">
+                        delete
+                        </span></span>
+                    <div id="question-options">
+                        <input type="radio" name="option" id="option-1">
+                        <label for="option-1"><input type="text" class="option" placeholder="Option 1"></label><br>
+                        <input type="radio" name="option" id="option-2">
+                        <label for="option-2"><input type="text" class="option" placeholder="Option 2"></label><br>
+                        <input type="radio" name="option" id="option-3">
+                        <label for="option-3"><input type="text" class="option" placeholder="Option 3"></label><br>
+                    </div>
+                </form>
+            </div>        
+        </div>
+        <button id="add-question-btn"><span class="material-icons-outlined">add</span></button>
+        <button id="teach-menu-btn" style="display:block; background-color: rgb(134, 134, 134);">Save Questions</button>
+    </div>
+</body>
+
+<script>
+    document.getElementById("add-question-btn").onclick = function() {
+        const element = document.getElementById("question-form");
+        const container = document.getElementById("add-question-div");
+        element.setAttribute("id", "question-form")
+        container.appendChild(element.cloneNode(true));
+    }
+</script>
+
+</html>

@@ -1,3 +1,26 @@
+/* fallback */
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(iconfont-o.woff2) format('woff2');
+  }
+  
+  .material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
 
 html{
     background-color:rgb(248, 222, 74);
@@ -252,4 +275,94 @@ html{
     font-size: 2.5vh;
     font-weight: bolder;
     transition-duration: 0.5s;
+}
+.main-container{
+    background-color: rgb(255, 255, 255, .5);
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding: 3vh;
+}
+#add-question-btn{
+    margin: auto;
+    display: block;
+}
+form#question-form{
+    background-color: white;
+    width: 70%;
+    padding: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+form#question-form input[type=text]{
+    width: 500px;
+    padding: 10px 20px;
+    border-color: transparent;
+    font-size: 16px;
+    background: transparent;
+}
+form#question-form #question{
+    border-bottom: 1px solid rgb(94, 94, 94);
+    width: 35em;
+}
+form#question-form input[type=text]:focus, form#question-form #question:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(160, 136, 0);
+    transition-duration: 0.5s;
+}
+form#question-form .option:hover{
+    border-bottom: 1px solid rgba(143, 143, 143, 0.7);
+    transition-duration: 0.5s;
+}
+form#question-form input[type=text]::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #3c3c3c;
+}
+form#question-form input[type=text]:-moz-placeholder { 
+    font-size: 16px;
+    color: #3c3c3c;
+}
+form#question-form input[type=text]::-moz-placeholder { 
+    font-size: 16px;
+    color: #3c3c3c;
+}
+form#question-form input[type=text]:-ms-input-placeholder {
+    font-size: 16px;
+    color: #3c3c3c;
+}
+form#question-form span{
+    background-color: transparent; 
+    color: #838383;
+}
+form#question-form #delete-question-btn, .main-container #add-question-btn{
+    padding: 10px;
+}
+form#question-form #delete-question-btn:hover{
+    background-color: rgb(241, 241, 241);
+    color: rgb(160, 136, 0);
+    border-radius: 50px;
+    transition-duration: 0.5s;
+}
+.main-container #add-question-btn{
+    border: none;
+    color: rgb(32, 32, 32);
+    background-color: transparent; 
+    border-radius: 50px;
+    margin-right: 12em;
+    margin-left: auto;    
+    background-color:transparent;
+    padding: 1px;
+}
+.main-container #add-question-btn:hover{
+    color: rgb(141, 120, 0);
+    font-weight: bolder;
+    transition-duration: 0.5s;
+    background-color: rgb(255, 255, 255);
+}
+.main-container #add-question-btn .material-icons-outlined{
+    font-size: 3em;
 }
