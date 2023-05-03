@@ -23,18 +23,27 @@
 }
 
 html{
-    background-color:rgb(248, 222, 74);
+    background-color:rgb(0, 0, 0);
 }
 .title {
     font-size: 15vh;
     margin: auto;
     padding: 0px;
     display: inline;
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(253,187,45,1) 75%  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'Sigmar One', cursive;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 #second-title{
-    color: rgb(0, 183, 255);
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(253,187,45,1) 75%  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 8vh;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
     margin: 0px;
     font-family: 'Sigmar One', cursive;
 }
@@ -43,6 +52,10 @@ html{
     align-items: center;
     margin: auto;
     padding: 0px;
+    background: rgb(41, 37, 37);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    border-bottom: 3px solid gold;
 }
 .login-title-header{
     text-align: center;
@@ -54,7 +67,20 @@ html{
 }
 #homepage-body{
     text-align: center;
-    padding-top: 10vh;
+    background-color: black;
+}
+#banner {
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(253,187,45,1) 75%  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
+    font-size: 10vh;
+    color: white;
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    padding: 4.5vh;
+    border: 3px solid black;
+    border-bottom: 3px solid gold;
 }
 #log-in-form{
     text-align: center;
@@ -70,7 +96,8 @@ html{
 
 .homepage-btn{
     border-radius: 10px;
-    background-color: gray;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 21%, rgba(156,12,12,1) 100%);
     text-align: center;
     height: 10vh;
     width: 40vh;
@@ -79,6 +106,7 @@ html{
     font-weight: bolder;
     color: white;
     margin: 2vw;
+    border: 2px solid rgb(255,215,0);
 }
 
 .homepage-btn:hover{
