@@ -299,7 +299,7 @@ form#question-form{
     border-radius: 10px;
 }
 form#question-form input[type=text]{
-    width: 500px;
+    width: 65%;
     padding: 10px 20px;
     border-color: transparent;
     font-size: 16px;
@@ -307,7 +307,7 @@ form#question-form input[type=text]{
 }
 form#question-form #question{
     border-bottom: 1px solid rgb(94, 94, 94);
-    width: 35em;
+    width: 65%;
 }
 form#question-form input[type=text]:focus, form#question-form #question:focus{
     outline: none;
