@@ -7,19 +7,15 @@
     $dir = 'game_files/'.$_GET['game_id'].'.json';
     $game_file = file_get_contents($dir);
     $game_questions = json_decode($game_file, true);
-    $question_iterator = 0;
+    $iterator = 0;
     $y = 0;
     $temp_Array = [];
-    $randomize_question = [];
-        while ($y < 30){
+        while ($y < 25){
             $current_iteration = $y;
-            $question_randomizer = rand(0,30);
             $num = rand(0,30);
             $exists = in_array($num, $temp_Array);
-            $quest_exists = in_array($question_randomizer, $randomize_question);
-            if (!$exists && !$quest_exists){
+            if (!$exists){
                 array_push($temp_Array, $num);
-                array_push($randomize_question, $question_randomizer);
                 $y++;
             } else {
                 $y = $current_iteration;
@@ -47,9 +43,19 @@
         <h2 id="second-title" style="display: inline">BINGO</h2>
     </div>
     <div id="question-table">
-        <p style="font-size: 1.5em; color:white">Time:</p> <input type="text" style="height: 5vh; width: 15vw; border-radius: 10px; justify-items:center;align-items:center; text-align:center" value="<?= date('h:i:s a'); ?>">
-        <div id="question-board">
-            <div id="top-div">
+        <div>
+            <p style="color:white; float:left; font-size: 1.5em;">Lives:</p>
+            <img src="images\heart.png" alt="" style="height: 85px; width: 85px">
+            <img src="images\heart.png" alt="" style="height: 85px; width: 85px">
+            <img src="images\heart.png" alt="" style="height: 85px; width: 85px">
+        </div>
+    <br>
+    <div>
+        <p style="float:left; font-size: 1.5em; color:white;">Time:</p>
+        <input type="text" style="display: inline; height: 5vh; width: 15vw; border-radius: 10px; justify-items:center;align-items:center; text-align:center" value="">
+    </div>
+     <div id="question-board">
+        <div id="top-div">
                 <p style="font-weight:bold">Question</p>
                 <p id="question"></p>
         </div>
@@ -89,31 +95,73 @@
 </body>
 
 <script>
+let question_randomizer = []
 let question_iterator = 0;
 let temparray = <?php echo json_encode($temp_Array); ?>;
-let question_randomizer = <?php echo json_encode($randomize_question); ?>;
 let game_questions = <?php echo json_encode($game_questions); ?>;
 
-$('#question').text(game_questions[temparray[question_iterator]][0])
+function shuffles(array) {
+  var m = array.length, t, i;
 
+    // While there remain elements to shuffle…
+    while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
+question_randomizer = shuffles(temparray)
+
+
+$('#question').text(game_questions[temparray[question_iterator]][0])
+console.log(temparray)
 $(document).on('click', '.bingo-ans', function (){
     if(question_randomizer[question_iterator] == $(this).attr('value')){
-        console.log('correct')
         $(this).css({
             backgroundColor: "blue",
             color : "white"
         })
         $(this).prop({disabled: true})
-        question_iterator++
-        $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        question_randomizer.splice(question_iterator, 1)
+        if (question_iterator < question_randomizer.length){
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        }
+        else if (question_iterator == question_randomizer.length){
+            question_iterator = 0
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        } else if (question_iterator > question_randomizer.length){
+            question_iterator = 0
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        }
+        
     } else {
-        console.log('wrong')
         $(this).css('background-color' , 'red')
         setTimeout(() => {
             $(this).css('background-color' , 'rgb(241, 189, 91)')
         }, 300);
+        // question_iterator++
+        // $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        console.log(question_iterator)
+        console.log(question_randomizer.length)
         question_iterator++
-        $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        if (question_iterator < question_randomizer.length){  
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        }
+        else if (question_iterator == question_randomizer.length){
+            question_iterator = 0
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        } else if (question_iterator > question_randomizer.length){
+            question_iterator = 0
+            $('#question').text(game_questions[question_randomizer[question_iterator]][0])
+        }
     }
 })
 </script>
