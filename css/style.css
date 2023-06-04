@@ -133,6 +133,112 @@ html{
     font-size: 3vh;
 }
 
+#customize-box .form-input{
+    height: 5vh;
+    width: 15vw;
+    border-radius: 10px;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    font-size: 3vh;
+    display: inline;
+}
+
+#customize-box .form-select{
+    height: 5vh;
+    width: fit-content;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 25px;
+    font-size: 3vh;
+    display: inline;
+    color: white;
+}
+
+#buttonbox {
+    margin-top: 15vh;
+}
+.student-boxes{
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vh;
+    justify-content: center;
+    color: white;
+}
+
+.student-boxes > div{
+    border: 2px solid rgb(0, 204, 255);
+    text-align: center;
+    justify-content: center;
+    height: 25vh;
+    border: 3px solid skyblue;
+    margin: 2em;
+  
+}
+
+.custom-question {
+    height: 10vh;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1em;
+    color: white;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.custom-question > div {
+    border: 2px solid rgb(0, 255, 221);
+    min-width: 20vw;
+    max-width: 20vw;
+    margin-bottom: 0.5em;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 16vh;
+    width: 10vw;
+    float: left;
+    margin-left: 2vw;
+    border: 1px solid white;
+}
+.mini-progress-grid{
+    border: 1px solid white;
+}
+
+.custom-question::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.custom-question::-webkit-scrollbar
+{
+    height: 10px;
+	background-color: #f8f8f8;
+}
+
+.custom-question::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #003cff;
+}
+html::-webkit-scrollbar {
+    border: 0;
+    width: 0;
+}
+
 #main-menu-btn {
     height: 5vh;
     width: 20vw;
