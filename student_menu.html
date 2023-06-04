@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Bingo!</title>
 </head>
@@ -20,19 +22,27 @@
     </div>
     <div id="log-in-form">
         <p>Code: </p><input type="text" class="form-input">
+        <button class="homepage-btn">Join</button>
         <br>
         <hr style="background-color: gold; border: 1px solid gold">
         <p>Category: </p>
-        <button class="homepage-btn-two">Operations</button>
-        <button class="homepage-btn-two">Fractions</button>
-        <button class="homepage-btn-two">Geometry</button>
+        <button class="homepage-btn-two" id="operations">Operations</button>
+        <button class="homepage-btn-two" id="fractions">Fractions</button>
+        <button class="homepage-btn-two" id="geometry">Geometry</button>
         <br><br><br><br>
-        <a href="bingo_game.html"><button class="homepage-btn" style="display:block; margin: auto">Let's Play!</button></a>
     </div>
 </body>
 
 <script>
-
+    $(document).on('click', '#operations', function(){
+        $.ajax({
+            type: 'POST',
+            url: 'problem_generator.php',
+            success:function(resp){
+                window.location.href = "bingo_game.php?game_id="+resp+""
+            }
+        })
+    });
 </script>
 
 </html>

@@ -104,7 +104,13 @@ html{
 
 .homepage-btn:hover{
     border: 2px solid rgb(255,215,0);
-    box-shadow: 10px 10px 3px rgba(253,187,45,1);
+    box-shadow: 5px 5px 3px rgba(253,187,45,1);
+    transition-duration: 0.5s;
+}
+
+.homepage-btn-two:hover{
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 3px 3px 3px rgba(0,255,255);
     transition-duration: 0.5s;
 }
     
@@ -210,10 +216,15 @@ html{
     border: 1px solid white;
     height: 10vh;
     width: 8vw;
-    font-size: 3em;
+    font-size: 1.5em;
     text-align: center;
     background-color: rgb(241, 189, 91);
+    user-select: none;  
 }
+#border-card tr td:hover {
+    outline: 3px solid rgb(0, 51, 255);
+}
+
 #border-card {
     float: right;
     border: 1px solid white;
@@ -227,8 +238,7 @@ html{
     min-width: 50%;
 }
 
-
-#type_bar {
+#type_bar { 
     width: 20vw;
     height: 5vh;
     display: block;
