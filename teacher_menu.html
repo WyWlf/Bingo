@@ -11,30 +11,26 @@
     <title>Bingo!</title>
 </head>
 <body>
-    <div class="login-title-header">
-        <h1 class="login-title" style="color: rgb(60, 60, 230)">M</h1>
-        <h1 class="login-title" style="color: rgb(228, 20, 20)">A</h1>
-        <h1 class="login-title" style="color: rgb(62, 218, 31)">T</h1>
-        <h1 class="login-title" style="color: rgb(23, 23, 167)">H</h1>
-        <h2 id="second-title" style="display: inline; padding-left: 2vw;">BINGO</h2>
+    <div class="title-header">
+        <h1 class="title">M</h1>
+        <h1 class="title">A</h1>
+        <h1 class="title">T</h1>
+        <h1 class="title">H</h1>
+        <h2 id="second-title" style="display: inline">BINGO</h2>
     </div>
     <div id="log-in-form">
         <p>Enter the number of participants: </p><input type="text" class="form-input" value="">
         <br>
         <hr style="border-color: black;">
         <p>Category: </p>
-        <div style="height: 35vh; padding: 2em;">
-            <div id="left-teach-menu">
-                <button id="teach-menu-btn" style="margin: auto;">Custom</button>
-            </div>
-            <div id="right-teach-menu">
-                <button id="teach-menu-btn">Operations</button>
-                <button id="teach-menu-btn">Fractions</button>
-                <button id="teach-menu-btn">Geometry</button>
-            </div>
+        <div id="teach-menu">
+            <button class="homepage-btn-two">Operations</button>
+            <button class="homepage-btn-two">Fractions</button>
+            <button class="homepage-btn-two">Geometry</button>
+            <button class="homepage-btn-two" style="margin: auto;">Custom</button>
         </div>
-        <button id="teach-menu-btn" style="display:block; background-color: rgb(134, 134, 134);">Let's Play!</button>
-    </div>
+        </div>
+    <button id="homepage-btn" style="display:block; background-color: rgb(134, 134, 134);">Let's Play!</button>
 </body>
 
 <script>
