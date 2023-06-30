@@ -22,8 +22,8 @@ function storeProblems(){
 }
 
 function mathGen(){
-    $first_val = rand(0,50);
-    $second_val = rand(0,50);
+    $first_val = rand(1,50);
+    $second_val = rand(1,50);
     $roll = rand(0,3);
     switch($roll){
         case 0:
@@ -35,12 +35,12 @@ function mathGen(){
             $question = $first_val." ➖ ".$second_val;
             break;
         case 2:
-            $mult_val = rand(0,10);
+            $mult_val = rand(1,10);
             $ans = $first_val * $mult_val;
             $question = $first_val." ✖️ ".$mult_val;
             break;
         case 3:
-            $div_val = rand(0,10);
+            $div_val = rand(1,10);
             $ans = $first_val / $div_val;
             $question = $first_val." ➗ ".$div_val;
             break;

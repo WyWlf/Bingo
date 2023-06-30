@@ -23,7 +23,6 @@
     </div>
     <div id="log-in-form">
         <p>Enter your credentials:</p>
-        <hr style="border-color: black;">
         <p>Username: </p><input type="text" class="form-input" id="username">
         <p>Password: </p><input type="password" class="form-input" id="password">
         <button class="homepage-btn login" style="height: 7vh">Log-in</button>
@@ -45,27 +44,27 @@
                     iziToast.info({
                             displayMode: 2,
                             message: 'Success!',
-                            timeout: 3000,
+                            timeout: false,
                             position: 'topCenter',
                         });
                         setTimeout(() => {
                             window.location.href = "student_menu.html"
-                        }, 3000);
+                        }, 500);
                     } else if (res == 'Teacher'){
                         iziToast.info({
                             displayMode: 2,
                             message: 'Success!',
-                            timeout: 3000,
+                            timeout: false,
                             position: 'topCenter',
                         });
                         setTimeout(() => {
                             window.location.href = "teacher_menu.html"
-                        }, 3000);
+                        }, 500);
                     } else {
                         iziToast.info({
                             displayMode: 2,
                             message: res+'!',
-                            timeout: 3000,
+                            timeout: false,
                             position: 'topCenter',
                         });
                     }

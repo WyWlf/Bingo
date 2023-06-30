@@ -18,6 +18,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
             echo $result['type'];
         } else {
             echo "Wrong Password";
+            echo $decrpyt_pass;
         }
     } else {
         echo "Account not found";

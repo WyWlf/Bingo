@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db   = 'bingo_database';
+$db   = 'bingo';
 $user = 'root';
-$pass = 'bH*6V)UVjI7cuc/O';
+$pass = '';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
